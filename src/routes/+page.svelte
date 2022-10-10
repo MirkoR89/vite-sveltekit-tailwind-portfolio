@@ -1,6 +1,4 @@
 <script>
-    import "../app.css";
-
     let test = 0;
 
     const plusOne = () => {

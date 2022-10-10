@@ -1,12 +1,16 @@
 <script>
     import "../app.css";
+    import Sidebar from "../coponents/Sidebar.svelte";
 </script>
 
 <nav
-    class="h-10 flex justify-end items-center gap-x-3 pr-3 text-xl font-mono bg-polarNight0 text-snowStorm0 dark:bg-snowStorm0 dark:text-polarNight0"
+    class="flex justify-between bg-polarNight0 text-xl font-mono text-snowStorm0 dark:bg-snowStorm0 dark:text-polarNight0"
 >
-    <a href="/">Home</a>
-    <a href="/about">About</a>
+    <Sidebar />
+    <div class="h-10 flex justify-end gap-x-3 pr-3 mt-3">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
 </nav>
 
 <slot />
