@@ -6,7 +6,7 @@
 </script>
 
 <div
-    class={`fixed top-0 left-0 h-full z-10 transition-all duration-300 ease-linear dark:bg-polarNight3 bg-snowStorm0 ${
+    class={`fixed top-0 left-0 h-full z-10 transition-all duration-300 ease-linear dark:bg-polarNight3 bg-snowStorm0 shadow-2xl  shadow-polarNight3 dark:shadow-inherit ${
         isOpen ? "w-1/6" : "w-20"
     }`}
 >

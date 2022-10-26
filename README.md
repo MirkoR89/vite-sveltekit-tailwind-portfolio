@@ -42,4 +42,8 @@ You can preview the production build with `npm run preview`.
 List of libraries:
 
 [Tailwindcss](https://tailwindcss.com/) v3.2.1
+
 [iconifly.desing](https://iconify.design/)
+
+[sveltekit-i18n](https://github.com/sveltekit-i18n/lib)
+

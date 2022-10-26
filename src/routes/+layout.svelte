@@ -15,7 +15,7 @@
 </script>
 
 <nav
-    class="flex justify-between bg-snowStorm0 dark:bg-polarNight3 dark:text-snowStorm0 text-polarNight0 text-xl font-mono "
+    class="flex justify-between bg-snowStorm0 dark:bg-polarNight2 dark:text-snowStorm0 text-polarNight0 text-xl font-mono "
 >
     <Sidebar />
     <div class="h-20 w-full flex items-center justify-end gap-x-10 pr-3">
@@ -40,13 +40,13 @@
                 <Icon
                     width="25"
                     height="25"
-                    icon="line-md:sunny-outline-to-moon-alt-loop-transition"
+                    icon="line-md:sun-rising-twotone-loop"
                 />
             {:else}
                 <Icon
                     width="25"
                     height="25"
-                    icon="line-md:sun-rising-twotone-loop"
+                    icon="line-md:sunny-outline-to-moon-alt-loop-transition"
                 />
             {/if}
         </button>
