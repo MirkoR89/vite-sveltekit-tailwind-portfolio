@@ -2,48 +2,53 @@
     import "../app.css";
     import Icon from "@iconify/svelte";
     import Sidebar from "../coponents/Sidebar.svelte";
+
+    let darkMode = false;
+
+    const handleSwitchDarkMode = () => {
+        darkMode = !darkMode;
+
+        darkMode
+            ? document.documentElement.classList.add("dark")
+            : document.documentElement.classList.remove("dark");
+    };
 </script>
 
 <nav
-    class="flex justify-between bg-polarNight0 text-xl font-mono text-snowStorm0 dark:bg-snowStorm0 dark:text-polarNight0"
+    class="flex justify-between bg-snowStorm0 dark:bg-polarNight3 dark:text-snowStorm0 text-polarNight0 text-xl font-mono "
 >
     <Sidebar />
-    <div class="h-10 w-full flex justify-end gap-x-10 pr-3 mt-3">
+    <div class="h-20 w-full flex items-center justify-end gap-x-10 pr-3">
         <button class="flex items-center gap-x-2">
-            <Icon
-                color="snowStorm0"
-                width="25"
-                height="25"
-                icon="line-md:home-simple-twotone"
-            />
+            <Icon width="25" height="25" icon="line-md:home-simple-twotone" />
             <a href="/">Home</a>
         </button>
         <button class="flex items-center gap-x-2">
-            <Icon
-                color="snowStorm0"
-                width="25"
-                height="25"
-                icon="line-md:account"
-            />
+            <Icon width="25" height="25" icon="line-md:account" />
             <a href="/about">About</a>
         </button>
         <button class="flex items-center gap-x-2">
-            <Icon
-                color="snowStorm0"
-                width="25"
-                height="25"
-                icon="line-md:email-twotone"
-            />
+            <Icon width="25" height="25" icon="line-md:email-twotone" />
             <a href="/contacts">Contacts</a>
         </button>
         <button class="flex items-center gap-x-2">
-            <Icon
-                color="snowStorm0"
-                width="25"
-                height="25"
-                icon="line-md:github-twotone"
-            />
+            <Icon width="25" height="25" icon="line-md:github-twotone" />
             <a href="/projects">Projects</a>
+        </button>
+        <button on:click={handleSwitchDarkMode}>
+            {#if !darkMode}
+                <Icon
+                    width="25"
+                    height="25"
+                    icon="line-md:sunny-outline-to-moon-alt-loop-transition"
+                />
+            {:else}
+                <Icon
+                    width="25"
+                    height="25"
+                    icon="line-md:sun-rising-twotone-loop"
+                />
+            {/if}
         </button>
     </div>
 </nav>
