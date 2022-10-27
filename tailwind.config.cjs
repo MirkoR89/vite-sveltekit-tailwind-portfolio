@@ -25,6 +25,9 @@ module.exports = {
       fontFamily: {
         'Victor': ['Victor Mono'],
       },
+      animation: {
+        cursor: 'cursor .6s linear infinite alternate',
+      },
     },
   },
   plugins: [],

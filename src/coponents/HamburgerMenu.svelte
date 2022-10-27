@@ -1,6 +1,5 @@
 <script>
     export let isOpen;
-    console.log(isOpen);
 </script>
 
 <div>

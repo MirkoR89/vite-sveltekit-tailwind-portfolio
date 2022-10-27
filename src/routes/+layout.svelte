@@ -35,17 +35,17 @@
             <Icon width="25" height="25" icon="line-md:github-twotone" />
             <a href="/projects">Projects</a>
         </button>
-        <button on:click={handleSwitchDarkMode}>
+        <button class="mr-4" on:click={handleSwitchDarkMode}>
             {#if !darkMode}
                 <Icon
-                    width="25"
-                    height="25"
+                    width="32"
+                    height="32"
                     icon="line-md:sun-rising-twotone-loop"
                 />
             {:else}
                 <Icon
-                    width="25"
-                    height="25"
+                    width="32"
+                    height="32"
                     icon="line-md:sunny-outline-to-moon-alt-loop-transition"
                 />
             {/if}
