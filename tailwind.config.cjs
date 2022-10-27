@@ -22,6 +22,9 @@ module.exports = {
         "auroraGreen": "#A3BE8C",
         "auroraViolet": "#B48EAD"
       },
+      fontFamily: {
+        'Victor': ['Victor Mono'],
+      },
     },
   },
   plugins: [],

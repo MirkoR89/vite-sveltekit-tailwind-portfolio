@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    fontFamily: "Victor Mono";
+    src: url("../asset/font/VictorMono-Regular.woff2") format('.woff2');
+}
+
+body {
+    @apply font-Victor;
+}

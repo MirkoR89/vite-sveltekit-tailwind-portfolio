@@ -15,7 +15,7 @@
 </script>
 
 <nav
-    class="flex justify-between bg-snowStorm0 dark:bg-polarNight2 dark:text-snowStorm0 text-polarNight0 text-xl font-mono "
+    class="flex justify-between bg-snowStorm0 dark:bg-polarNight2 dark:text-snowStorm0 text-polarNight0 text-xl font-bold"
 >
     <Sidebar />
     <div class="h-20 w-full flex items-center justify-end gap-x-10 pr-3">
