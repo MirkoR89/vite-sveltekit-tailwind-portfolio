@@ -27,7 +27,8 @@
             <span
                 class={`${
                     !isOpen ? "-left-28" : "left-20"
-                } absolute transition-all duration-300 ease-linear`}>About</span
+                } absolute transition-all duration-300 ease-linear`}
+                >About me</span
             >
         </a>
         <a href="/contacts" class="flex items-center gap-x-2">

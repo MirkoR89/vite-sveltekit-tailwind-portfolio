@@ -25,7 +25,7 @@
         </button>
         <button class="flex items-center gap-x-2">
             <Icon width="25" height="25" icon="line-md:account" />
-            <a href="/about">About</a>
+            <a href="/about">About me</a>
         </button>
         <button class="flex items-center gap-x-2">
             <Icon width="25" height="25" icon="line-md:email-twotone" />
