@@ -47,3 +47,6 @@ List of libraries:
 
 [sveltekit-i18n](https://github.com/sveltekit-i18n/lib)
 
+[emailjs](https://www.emailjs.com/)
+
+

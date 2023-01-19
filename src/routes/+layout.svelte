@@ -64,4 +64,8 @@
     </div>
 </nav>
 
-<slot />
+<div
+    class="w-[calc(100%-5rem)] ml-auto px-3 dark:bg-polarNight0 dark:text-snowStorm0 bg-snowStorm2 text-polarNight0"
+>
+    <slot />
+</div>
