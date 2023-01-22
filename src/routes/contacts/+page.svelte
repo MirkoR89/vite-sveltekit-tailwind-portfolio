@@ -1,5 +1,6 @@
 <script>
     import Icon from "@iconify/svelte";
+    import emailjs from "@emailjs/browser";
 
     const contacts = [
         {
@@ -31,25 +32,71 @@
             link: "https://github.com/MirkoR89",
         },
     ];
+
+    const sendEmail = (e) => {
+        emailjs
+            .sendForm(
+                "service_o1i5vls",
+                "template_wvt49tu",
+                e.target,
+                "J7FQhD9jGv3MoD6uL"
+            )
+            .then(
+                (result) => {
+                    console.log("SUCCESS!", result.text);
+                },
+                (error) => {
+                    console.log("FAILED...", error.text);
+                }
+            );
+    };
 </script>
 
 <div
     class="h-[calc(100vh-5rem)] flex flex-col justify-center items-center gap-y-10"
 >
-    <h1 class="text-3xl font-bold">Contacts</h1>
-    <p class="text-center text-xl font-semibold px-32">
-        Hey, you can find my contacts following here or use the form to text me
-        a email!
-    </p>
-    <div class="flex flex-col justify-center gap-y-3 text-lg">
-        {#each contacts as contact}
-            <div>
-                <a class="flex gap-x-2" href={contact.link}>
-                    <Icon width="25" height="25" icon={contact.icon} />
-                    <span class="first-letter:capitalize">{contact.name}</span>
-                    <span>{contact.content}</span>
-                </a>
+    <h1 class="text-6xl font-bold text-auroraGreen">Contacts</h1>
+    <div class="w-full flex justify-around gap-x-20 px-20">
+        <form
+            on:submit|preventDefault={(e) => sendEmail(e)}
+            class="w-1/2 flex flex-col gap-y-3 text-lg"
+        >
+            <div class="flex flex-col gap-y-1">
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Text your name" />
             </div>
-        {/each}
+            <div class="flex flex-col gap-y-1">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Text your email"
+                />
+            </div>
+            <div class="flex flex-col gap-y-1">
+                <label for="message">Message</label>
+                <textarea
+                    name="message"
+                    rows="10"
+                    placeholder="Text your message"
+                />
+            </div>
+            <input type="submit" value="Send" />
+        </form>
+        <div class="w-1/2 flex flex-col justify-center gap-y-6 text-lg">
+            {#each contacts as contact}
+                <div>
+                    <a class="flex gap-x-10 text-2xl" href={contact.link}>
+                        <Icon width="35" height="35" icon={contact.icon} />
+                        <span
+                            class={`${
+                                !contact.content && "underline"
+                            } first-letter:capitalize`}>{contact.name}</span
+                        >
+                        <span>{contact.content}</span>
+                    </a>
+                </div>
+            {/each}
+        </div>
     </div>
 </div>

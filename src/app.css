@@ -37,3 +37,7 @@ body {
         opacity: 0;
     }
 }
+
+input, textarea {
+@apply bg-snowStorm0 rounded p-1 focus:outline-none border-2 border-polarNight3 focus:border-2 focus:border-auroraGreen disabled:opacity-60 dark:bg-polarNight1
+}
