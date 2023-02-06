@@ -8,7 +8,7 @@
 }
 
 body {
-    @apply font-Victor;
+    @apply font-Victor text-snowStorm2 dark:text-polarNight0;
 }
 
 .will-change-transform {
@@ -40,4 +40,8 @@ body {
 
 input, textarea {
 @apply bg-snowStorm0 rounded p-1 focus:outline-none border-2 border-polarNight3 focus:border-2 focus:border-auroraGreen disabled:opacity-60 dark:bg-polarNight1
+}
+
+#button {
+@apply rounded-full uppercase font-semibold border-2 border-polarNight3 dark:border-snowStorm2 disabled:opacity-60
 }

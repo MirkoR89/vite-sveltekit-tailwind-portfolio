@@ -63,11 +63,17 @@
         >
             <div class="flex flex-col gap-y-1">
                 <label for="name">Name</label>
-                <input type="text" name="name" placeholder="Text your name" />
+                <input
+                    required
+                    type="text"
+                    name="name"
+                    placeholder="Text your name"
+                />
             </div>
             <div class="flex flex-col gap-y-1">
                 <label for="email">Email</label>
                 <input
+                    required
                     type="email"
                     name="email"
                     placeholder="Text your email"
@@ -76,18 +82,25 @@
             <div class="flex flex-col gap-y-1">
                 <label for="message">Message</label>
                 <textarea
+                    required
                     name="message"
                     rows="10"
                     placeholder="Text your message"
                 />
             </div>
-            <input type="submit" value="Send" />
+            <button
+                id="button"
+                type="submit"
+                class="bg-auroraGreen text-polarNight0"
+                value="Send"
+                >Send
+            </button>
         </form>
         <div class="w-1/2 flex flex-col justify-center gap-y-6 text-lg">
             {#each contacts as contact}
                 <div>
-                    <a class="flex gap-x-10 text-2xl" href={contact.link}>
-                        <Icon width="35" height="35" icon={contact.icon} />
+                    <a class="flex gap-x-10 text-3xl" href={contact.link}>
+                        <Icon width="45" height="45" icon={contact.icon} />
                         <span
                             class={`${
                                 !contact.content && "underline"
