@@ -5,31 +5,33 @@
     const contacts = [
         {
             id: 0,
-            name: "phone number",
             icon: "line-md:grid-3-twotone",
             content: "+39 3492133758",
             link: "",
         },
         {
             id: 1,
-            name: "email",
             icon: "line-md:email-twotone-alt",
             content: "mirko.rinelli@gmail.com",
             link: "",
         },
         {
             id: 2,
-            name: "linkedin",
             icon: "line-md:linkedin",
-            content: "",
+            content: "Mirko Rinelli",
             link: "https://www.linkedin.com/in/mirko-rinelli-a04695118/",
         },
         {
             id: 3,
-            name: "github",
             icon: "line-md:github-loop",
-            content: "",
+            content: "MirkoR89",
             link: "https://github.com/MirkoR89",
+        },
+        {
+            id: 4,
+            icon: "icon-park-twotone:gitlab",
+            content: "MirkoR89",
+            link: "https://gitlab.com/MirkoR89",
         },
     ];
 
@@ -55,8 +57,7 @@
 <div
     class="h-[calc(100vh-5rem)] flex flex-col justify-center items-center gap-y-10"
 >
-    <h1 class="text-6xl font-bold text-auroraGreen">Contacts</h1>
-    <div class="w-full flex justify-around gap-x-20 px-20">
+    <div class="w-full flex justify-between gap-x-32 px-32">
         <form
             on:submit|preventDefault={(e) => sendEmail(e)}
             class="w-1/2 flex flex-col gap-y-3 text-lg"
@@ -91,25 +92,33 @@
             <button
                 id="button"
                 type="submit"
-                class="bg-auroraGreen text-polarNight0"
+                class="bg-auroraGreen text-polarNight0 mt-7"
                 value="Send"
                 >Send
             </button>
         </form>
-        <div class="w-1/2 flex flex-col justify-center gap-y-6 text-lg">
-            {#each contacts as contact}
-                <div>
-                    <a class="flex gap-x-10 text-3xl" href={contact.link}>
-                        <Icon width="45" height="45" icon={contact.icon} />
-                        <span
+        <div class="w-1/2">
+            <h1 class="text-6xl font-bold text-auroraGreen mt-28">Contacts</h1>
+            <div class="flex flex-col justify-center gap-y-6 text-lg mt-12">
+                {#each contacts as contact}
+                    <div>
+                        <a
                             class={`${
-                                !contact.content && "underline"
-                            } first-letter:capitalize`}>{contact.name}</span
+                                !contact.link && "cursor-default"
+                            } flex gap-x-10 text-3xl`}
+                            href={contact.link}
                         >
-                        <span>{contact.content}</span>
-                    </a>
-                </div>
-            {/each}
+                            <Icon width="45" height="45" icon={contact.icon} />
+                            <span
+                                class={`${
+                                    contact.link &&
+                                    "underline underline-offset-4"
+                                }`}>{contact.content}</span
+                            >
+                        </a>
+                    </div>
+                {/each}
+            </div>
         </div>
     </div>
 </div>
